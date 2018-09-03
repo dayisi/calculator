@@ -15,6 +15,7 @@ V0 is a sinlge calculator which can make simple calculationdd using lex and yacc
 		make clean
 
 ##################################################################################################
+
 V1 is a more complex calculator containing variables.
 	* The source code is referenced from Practice, Part II.
 	* Only integer calculation for addition, subtraction, mulplication and division with round brackets.
@@ -25,6 +26,7 @@ V1 is a more complex calculator containing variables.
 		make
 		./calculator
 		make clean
+
 ##################################################################################################
 
 V2 is a more complex calculator using lex and yacc.
