@@ -2,7 +2,6 @@ CCC = gcc
 YACC = yacc
 LEX = lex
 
-
 lex.yy.c: calculator.l
 	$(LEX) calculator.l
 y.tab.c: calculator.y
@@ -24,4 +23,4 @@ clean:
 		/bin/rm -rf *.o
 		/bin/rm -rf calculator
 
-.DEFAULT_GOAL:= calculator
+.DEFAULT_GOAL := calculator
