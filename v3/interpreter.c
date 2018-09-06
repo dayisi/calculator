@@ -5,6 +5,8 @@
 
 int ex(nodeType *p){
 	if(!p) return 0;
+	int max =0;
+	int min = 0;
 	switch(p->type){
 		case typeCon:			return p->con.value;
 		case typeId:			return sym[p->id.i];
@@ -34,6 +36,16 @@ int ex(nodeType *p){
 				case LE:		return ex(p->opr.op[0]) <= ex(p->opr.op[1]);
 				case NE:		return ex(p->opr.op[0]) != ex(p->opr.op[1]);
 				case EQ:		return ex(p->opr.op[0]) == ex(p->opr.op[1]);
+				case MAX:		max = ex(p->opr.op[0]);
+								for( int i = 0; i < p->opr.nops;i++)
+										max = (max > ex(p->opr.op[i]) ? max : ex(p->opr.op[i]));
+								return max;
+				case MIN:		min = ex(p->opr.op[0]);
+								for( int i = 0; i < p->opr.nops;i++)
+										min = (min < ex(p->opr.op[i]) ? min : ex(p->opr.op[i]));
+								return min;
+
+
 			}
 	
 	}

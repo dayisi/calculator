@@ -43,5 +43,5 @@ V2 is a more complex calculator using lex and yacc based on v1.
 
 ##################################################################################################
 
-V3 adds exponential operator "^" and MAX(parameter1,parameter2), MIN(parameter1, parameter2) in the calculator of v2.
+V3 adds exponential operator "^" and MAX(parameter1,parameter2,...), MIN(parameter1, parameter2,...) in the calculator of v2.
 

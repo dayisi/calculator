@@ -35,7 +35,7 @@ int sym[26];					/* symbol table of variable name*/
 %right '^'
 %nonassoc UMINUS
 
-%type <nPtr> stmt expr stmt_list
+%type <nPtr> stmt expr stmt_list max_list min_list
 
 %%
 
@@ -79,7 +79,19 @@ expr:
 | expr LE expr 			{ $$ = opr(LE, 2, $1, $3); }
 | expr NE expr 			{ $$ = opr(NE, 2, $1, $3); }
 | expr EQ expr			{ $$ = opr(EQ, 2, $1, $3); }
+| MAX '(' max_list ')' 	{ $$ = opr(MAX, 1, $3);}
+| MIN '(' min_list ')'	{ $$ = opr(MIN, 1, $3);}
 | '(' expr ')'			{ $$ = $2;}
+;
+
+max_list:
+	expr				{ $$ = $1;}
+| max_list ',' expr		{ $$ = opr(MAX, 2, $1, $3);}
+;
+
+min_list:
+	expr				{ $$ = $1;}
+| min_list ',' expr		{ $$ = opr(MIN, 2, $1, $3);}
 ;
 
 %%
