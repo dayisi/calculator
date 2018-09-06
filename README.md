@@ -29,10 +29,15 @@ V1 is a more complex calculator containing variables.
 
 ##################################################################################################
 
-V2 is a more complex calculator using lex and yacc.
-	* The source code is referenced from Calculator.
+V2 is a more complex calculator using lex and yacc based on v1.
+	* The source code is referenced from Calculator, the version of interpretor.
 	* WHILE loop and IF ELSE condition statement are added.
 	* You need print expression to see values.
 	* >,<,==,!=,>=,<= are added.
 	* Every expression must end with ";".
 	* "{" and "}" are used for scope or statement list.
+	* In the calculator/v1 directory, these are commands:
+		make
+		./calculator
+		make clean
+
