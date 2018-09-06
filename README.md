@@ -30,4 +30,9 @@ V1 is a more complex calculator containing variables.
 ##################################################################################################
 
 V2 is a more complex calculator using lex and yacc.
-	* THe source code is referenced from Calculator.
+	* The source code is referenced from Calculator.
+	* WHILE loop and IF ELSE condition statement are added.
+	* You need print expression to see values.
+	* >,<,==,!=,>=,<= are added.
+	* Every expression must end with ";".
+	* "{" and "}" are used for scope or statement list.
